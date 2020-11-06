@@ -1,53 +1,143 @@
+html {
+	background-color:#313131;
+}
+
+
 body {
 	width: 90%;
-	max-width: 2000px;
-	min-width: 1500px;
+	max-width: 1450px;
+	min-width: 1000px;
 	margin: 0 auto;
     font-family: 'Raleway', sans-serif;
+    background-color: white;
 }
 
 header {
 	display:flex;
 	justify-content:space-between;
-	background-color:#FFB200;
-	padding:30px 40px 10px;
+	height:120px;
+	padding-right: 30px;
 }
 
-#logo {
-	height:60px;
+header > img {
+	height:50px;
+	padding:50px 60px 0px;
 }
 
-nav {
-    float: right;
-    position: relative;
-}
-nav ul { 
+header > nav > ul { 
 	list-style-type: none; 
-	padding: 0px;
 	margin: 0px;
+	padding: 0px;
 	position: relative;
 }
-nav ul li {
-	display: block;
+header > nav > ul > li {
+	display: inline-block;
 	float: left;
-	padding: 0px 30px;
+	padding:50px 32px 0px;
 	margin: 0px;
 	/*width:150px;*/
 }
 
-nav ul li a {
-    font-size: 20px;
+header > nav > ul > li a,
+header > nav > ul > li a:link,
+header > nav > ul > li a:visited,
+header > nav > ul > li a:active {
+    font-size: 16px;
     text-decoration: none;
+    color: black;
 }
 
+li.active {
+	color:#0065FC;
+	border-top:3px solid;
+}
+
+header > nav > ul > li.active a {
+	color:#0065FC;
+}
+
+#signin {
+	color:#0065FC;
+	font-weight:bold;
+}
+
+/********************
+ * 
+ ********************/
+#wrapper {
+	padding:0 50px 50px 50px;
+}
+ 
+#filters {
+	font-weight:bold;
+	font-size:18px;
+}
+
+#filters > .label {
+	margin-right:10px;
+}
+
+#filters > .filter {
+	display: inline-block;
+	border: 1px solid #D0D0D0;
+	padding-right: 20px;
+	border-radius:25px;
+	margin: 0 10px;
+	cursor:pointer;
+}
+
+#filters > .filter:hover {
+	color:#1E90FF;
+}
+
+.fas {
+	color:#1E90FF;
+	background-color: #deebff;
+    border-radius: 50%;
+    padding: 15px;
+    margin-right: 20px;
+    width: 20px;
+    text-align: center;
+}
+ 
 .image {
 	background-size: cover;
+	background-position: center center;
 	width: 300px;
 	height: 200px;
 }
 
 .image img {
 	display: none;
-	position:absolute;
-	clip:rect(25%, auto, auto, 25%);
+}
+
+/****************
+ * Footer
+ ****************/
+footer {
+	background-color: #F2F2F2;
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 50px;
+}
+
+footer > nav {
+	position: relative;
+	width: 33%;
+}
+
+footer > nav > ul {
+	list-style-type: none;
+	list-style-position: outside;
+	margin:0;
+	padding:0;
+}
+
+footer > nav > ul > li {
+	height:30px;
+}
+
+footer > nav > ul > li > a {
+	text-decoration: none;
+	color:black;
 }

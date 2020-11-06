@@ -5,16 +5,18 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="styles.css">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+	<link href="css/fontawesome.min.css" rel="stylesheet">
+	<link href="css/solid.css" rel="stylesheet">
 </head>
 
 <body>
 	<header>
-		<img id="logo" src="images/logo/Reservia@3x.png" srcset="images/logo/Reservia.svg" alt="Reservia" />
+		<img src="images/logo/Reservia@3x.png" srcset="images/logo/Reservia.svg" alt="Reservia" />
 		<nav>
 			<ul>
-				<li><a href="#accommodations">H&eacute;bergements</a></li>
+				<li class="active"><a href="#accommodations">H&eacute;bergements</a></li>
 				<li><a href="#activities">Activit&eacute;s</a></li>
-				<li><a href="#">S'inscrire</a></li>
+				<li><a href="#" id="signin">S'inscrire</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -25,7 +27,11 @@
 			
 			
 			<div id="filters">
-				Filtres <span>&Eacute;conomique</span> <span>Familial</span> <span>Romantique</span> <span>Animaux autoris&eacute;s</span>
+				<span class="label">Filtres</span>
+				<span class="filter"><i class="fas fa-money-bill-wave"></i>&Eacute;conomique</span>
+				<span class="filter"><i class="fas fa-child"></i>Familial</span>
+				<span class="filter"><i class="fas fa-heart"></i>Romantique</span>
+				<span class="filter"><i class="fas fa-dog"></i>Animaux autoris&eacute;s</span>
 			</div>
 			<span>Plus de 500 logments sont disponibles dans cette ville</span>
 		</section>
@@ -107,8 +113,70 @@
 				<span>5 stars</span>
 			</article>
 		</aside>
+		<section id="activities">
+			<h2>Activit&eacute; &agrave; Marseille</h2>
+			<article>
+				<div class="image" style="background-image:url(images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg)">
+					<img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="" />
+				</div>
+				<h3>Vieux port</h3>
+			</article>
+			<article>
+				<div class="image" style="background-image:url(images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg)">
+					<img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="" />
+				</div>
+				<h3>Fort de Pom&egrave;gues</h3>
+			</article>
+			<article>
+				<div class="image" style="background-image:url(images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg)">
+					<img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="" />
+				</div>
+				<h3>&Icirc;les du Frioul</h3>
+			</article>
+			<article>
+				<div class="image" style="background-image:url(images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg)">
+					<img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="" />
+				</div>
+				<h3>Parc Nationnal des Calanques</h3>
+			</article>
+			<article>
+				<div class="image" style="background-image:url(images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg)">
+					<img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="" />
+				</div>
+				<h3>Notre-Dame-de-la-Gardet</h3>
+			</article>
+			<article>
+				<div class="image" style="background-image:url(images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg)">
+					<img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="" />
+				</div>
+				<h3>Parc Longchamp</h3>
+			</article>
+		</section>
 	</div>
-	<footer></footer>
+	<footer>
+		<nav id="about">
+			<h3>A propos</h3>
+			<ul>
+				<li><a href="#">Fonctionnement du site</a></li>
+				<li><a href="#">Conditions g&eacute;n&eacute;rales de vente</a></li>
+				<li><a href="#">Donn&eacute;es et confidentialité</a></li>
+			</ul>
+		</nav>
+		<nav id="our_accommodations">
+			<h3>Nos h&eacute;bergements</h3>
+			<ul>
+				<li><a href="#">Charte qualit&eacute;</a></li>
+				<li><a href="#">Soumettre votre h&ocirc;tel</a></li>
+			</ul>
+		</nav>
+		<nav id="assistance">
+			<h3>Assistance</h3>
+			<ul>
+				<li><a href="#">Centre d'aide</a></li>
+				<li><a href="#">Nous contacter</a></li>
+			</ul>
+		</nav>
+	</footer>
 </body>
 
 </html>
