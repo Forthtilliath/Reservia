@@ -68,13 +68,22 @@ header > nav > ul > li.active a {
 	padding:0 50px 50px 50px;
 }
 
+#search > h1 {
+	margin: 20px 10px 10px 10px;
+}
+
+#search > span {
+	margin: 0 10px 0 10px;
+}
+
 #search > .info {
-	padding: 20px 0px;
+	margin: 30px 0px;
 }
  
 #filters {
 	font-weight:bold;
 	font-size:18px;
+	margin: 20px 10px;
 }
 
 #filters > .label {
@@ -123,7 +132,7 @@ header > nav > ul > li.active a {
 
 #accommodations {
 	width: 60%;
-	height: 620px;
+	height: 640px;
 	float:left;
 	/*position:static;*/
 	background-color: #F2F2F2;
@@ -181,7 +190,7 @@ header > nav > ul > li.active a {
 #show_more {
 	font-weight:bold;
 	font-size:18px;
-	margin: 20px 0;
+	padding: 10px 0 20px;
 	cursor:pointer;
 }
 
