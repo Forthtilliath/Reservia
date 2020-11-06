@@ -125,7 +125,7 @@ header > nav > ul > li.active a {
 	width: 60%;
 	height: 620px;
 	float:left;
-	position:static;
+	/*position:static;*/
 	background-color: #F2F2F2;
 	border-radius: 20px;
 	padding: 20px 30px; 
@@ -162,7 +162,7 @@ header > nav > ul > li.active a {
 #accommodations_cards > article > h4,
 #accommodations_cards > article > .prix,
 #accommodations_cards > article > .stars {
-	padding: 0 10px;
+	padding: 5px 10px 0;
 }
 
 #accommodations_cards > article > .prix {
@@ -209,7 +209,7 @@ a:hover {
 }
 
 aside {
-	position: static;
+	/*position: static;*/
 	float: right;
 	width: 28%;
 	height: 620px;
@@ -218,13 +218,13 @@ aside {
 	padding: 20px 30px; 
 }
 
-aside > span {
+aside > div {
 	display:flex;
 	justify-content:space-between;
 	align-items:center;
 }
 
-aside > span > i {
+aside > div > i {
 	font-size:24px;
 }
 
@@ -285,9 +285,73 @@ aside > span > i {
 }
 
 #accommodations_cards > article:hover,
-#aside_cards > article:hover {
+#aside_cards > article:hover,
+#activities article article:hover {
 	box-shadow: 5px 5px 12px #1E90FF;
 }
+
+#activities {
+	clear: both;
+	width: 1350px;
+	padding-top: 30px;
+}
+	
+#activities_cards {
+	width: 1350px;
+    height: 500px;
+	display:flex;
+	justify-content:space-between;
+}
+
+#activities_cards article > .image {
+	width: 100%;
+	border-radius: 15px 15px 0 0;
+}
+
+#activities_cards > .one_article > article > .image {
+	height: 450px;
+}
+
+#activities_cards > .two_articles > article > .image {
+	height: 190px;
+}
+
+#activities_cards div {
+	width:25%;
+	height:100%;
+	padding:0;
+	margin-right:30px;
+}
+
+#activities_cards div:last-child {
+    margin-right: 0;
+}
+
+#activities_cards article {
+	width: 100%;
+	background-color:white;
+	border-radius: 15px;
+	margin-bottom: 20px;
+	box-shadow: 3px 3px 10px #aaa;
+	cursor:pointer;
+}
+
+#activities_cards article:hover {
+	box-shadow: 3px 3px 10px #1E90FF;
+}
+
+#activities_cards > .one_article > article {
+	height: 500px;
+}
+
+#activities_cards > .two_articles > article {
+	height: 240px;
+}
+
+#activities_cards article > h3 {
+	padding-left: 20px;
+	padding-bottom: 10px;
+}	
 
 /****************
  * Footer
