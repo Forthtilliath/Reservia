@@ -284,6 +284,11 @@ aside > span > i {
 	width:100%;
 }
 
+#accommodations_cards > article:hover,
+#aside_cards > article:hover {
+	box-shadow: 5px 5px 12px #1E90FF;
+}
+
 /****************
  * Footer
  ****************/
