@@ -26,11 +26,10 @@
 			<h1>Trouver votre h&eacute;bergement pour des vacances de r&ecirc;ves</h1>
 			<span>En plein centre ou en pleine nature</span>
 			
-			<form action="#" name="form_search" method="_GET">
-				<div class="input-prepend">
-					<span class="add-on"><i class="fas fa-map-marker-alt"></i></span>
-					<input type="text" id="ville" value="Marseille, France" /><input type="submit" class="submit" value="Rechercher" />
-				</div>
+			<form action="#" name="form_search" id="form_search" method="_GET">
+				<span class="map-marker"><i class="fas fa-map-marker-alt"></i></span>
+				<input type="text" name="ville" value="Marseille, France" id="form_search_ville" />
+				<input type="submit" class="submit" value="Rechercher" id="form_search_bt" />
 			</form>
 			
 			<div id="filters">
