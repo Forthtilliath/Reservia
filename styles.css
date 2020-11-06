@@ -123,6 +123,7 @@ header > nav > ul > li.active a {
 
 #accommodations {
 	width: 60%;
+	height: 620px;
 	float:left;
 	position:static;
 	background-color: #F2F2F2;
@@ -141,7 +142,7 @@ header > nav > ul > li.active a {
 #accommodations_cards > article > .image {
 	width: 100%;
 	height: 150px;
-	border-radius: 15px;
+	border-radius: 15px 15px 0 0;
 }
 
 #accommodations_cards > article {
@@ -149,7 +150,7 @@ header > nav > ul > li.active a {
 	border-radius: 15px;
 	border: 5px solid white;
 	width: 30%;
-	margin-bottom:20px;
+	margin-bottom:30px;
 	box-shadow: 5px 5px 12px #aaa;
 	cursor:pointer;
 }
@@ -168,12 +169,12 @@ header > nav > ul > li.active a {
 	font-size: 14px;
 }
 
-#accommodations_cards > article > .stars {
+.stars {
 	font-size: 14px;
 	color: #b1b4b9;
 }
 
-#accommodations_cards > article > .stars .star {
+.stars .star {
 	color: #0065FC;
 }
 
@@ -199,8 +200,8 @@ a:hover {
 .image {
 	background-size: cover;
 	background-position: center center;
-	width: 210px;
-	height: 110px;
+	/*width: 210px;
+	height: 110px;*/
 }
 
 .image img {
@@ -210,10 +211,35 @@ a:hover {
 aside {
 	position: static;
 	float: right;
-	width: 30%;
+	width: 28%;
+	height: 620px;
 	background-color: #F2F2F2;
 	border-radius: 20px;
 	padding: 20px 30px; 
+}
+
+aside > span {
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+
+aside > span > i {
+	font-size:24px;
+}
+
+#aside_cards {
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	height: 5;
+}
+
+#aside_cards h4 {
+	padding: 10px 0 0;
+	margin: 0 auto;
+	display: inline-block;
+    vertical-align:top;
 }
 
 #aside_cards > article {
@@ -221,15 +247,41 @@ aside {
 	border-radius: 15px;
 	border: 5px solid white;
 	width: 90%;
-	margin:0 20px 20px;
+	margin:0 20px 30px;
 	box-shadow: 5px 5px 12px #aaa;
 	cursor:pointer;
+	display:flex;
+	height: 30%;
 }
  
 #aside_cards > article > .image {
-	height: 100%;
-	width: 75px;
-	border-radius: 15px;
+	height: 150px;
+	width: 30%;
+	border-radius: 15px 0 0 15px;
+	margin-right: 20px;
+}
+
+#aside_cards > article > .content {
+	height: 150px;
+	width: 60%;
+	display: flex;
+	flex-direction:column;
+	justify-content:space-between;
+}
+
+#aside_cards > article > .content h4 {
+	width:100%;
+}
+
+#aside_cards > article > .content .prix {
+	font-size: 14px;
+	margin-top: 10px;
+	width:100%;
+}
+
+#aside_cards > article > .content > .stars {
+	height:30px;
+	width:100%;
 }
 
 /****************
