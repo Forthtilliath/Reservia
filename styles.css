@@ -2,9 +2,11 @@
 	--background-color: #313131;
 	--page-background: white;
 	--section-background: #F2F2F2;
+	--article-background: white;
 	--text-font: 'Raleway', sans-serif;
 	--text-color: black;
 	--hover-color: #1E90FF;
+	--main-color: #0065FC;
 }
 
 html {
@@ -15,7 +17,7 @@ body {
 	width: 90%;
 	margin: 0 auto;
 	max-width: 1450px;
-	min-width: 1000px;
+	/*min-width: 1000px;*/
     font-family: var(--text-font);
     background-color: var(--page-background);
     color: var(--text-color);
@@ -31,7 +33,7 @@ body {
 }
 
 .stars .star {
-	color: #0065FC;
+	color: var(--main-color);
 } 
 
 .image {
@@ -88,17 +90,17 @@ header > nav > ul > li a:active {
 
 header > nav > ul > li.active,
 header > nav > ul > li:hover {
-	color:#0065FC;
-	border-top:3px solid;
+	color: var(--main-color);
+	border-top: 3px solid;
 }
 
 header > nav > ul > li.active a {
-	color:#0065FC;
+	color: var(--main-color);
 }
 
 #signin {
-	color:#0065FC;
-	font-weight:bold;
+	color: var(--main-color);
+	font-weight: bold;
 }
 
 /****************************************************
@@ -162,9 +164,9 @@ header > nav > ul > li.active a {
 #form_search_bt {
     display: inline-block;
     height: 50px;
-    background-color:#0065FC;
-    color:white;
-    font-size:22px;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 22px;
     border: none;
     text-decoration: none;
     cursor:pointer;
@@ -175,9 +177,14 @@ header > nav > ul > li.active a {
     -o-border-radius: 0 10px 10px 0;
     vertical-align: middle;
 }
-#form_search_bt:hover {
-    background-color:#DEEBFF;
-    color:#0065FC;
+
+#form_search_bt:hover,
+#form_search_bt:focus,
+#form_search_bt:active {
+    background-color: #FF9803;
+    color:black;
+    box-shadow: 3px 3px 10px #aaa;
+    text-shadow: 1px 1px;
 }
  
 /****************************************************
@@ -211,7 +218,7 @@ header > nav > ul > li.active a {
 }
 
 .filter .fas {
-	color:#0065FC;
+	color: var(--main-color);
 	background-color: #deebff;
     border-radius: 50%;
     -moz-border-radius: 50%;
@@ -260,7 +267,8 @@ header > nav > ul > li.active a {
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
-	padding: 20px 30px; 
+	/*padding: 20px 30px;*/ 
+	padding: 20px 2%; 
 }
 
 #accommodations_cards {
@@ -281,7 +289,7 @@ header > nav > ul > li.active a {
 }
 
 #accommodations_cards > article {
-	background-color: white;
+	background-color: var(--article-background);
 	border-radius: 15px;
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
@@ -338,7 +346,8 @@ aside {
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
-	padding: 20px 30px; 
+	/*padding: 20px 30px;*/
+	padding: 20px 2%; 
 }
 
 aside > div {
@@ -365,14 +374,15 @@ aside > div > i {
 }
 
 #aside_cards > article {
-	background-color: white;
+	background-color: var(--article-background);
 	border-radius: 15px;
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
 	border: 5px solid white;
 	width: 90%;
-	margin:0 20px 30px;
+	/*margin:0 20px 30px;*/
+	margin-bottom: 30px;
 	box-shadow: 3px 3px 10px #aaa;
 	cursor:pointer;
 	display:flex;
@@ -446,7 +456,7 @@ aside > div > i {
 
 #activities_cards article {
 	width: 100%;
-	background-color:white;
+	background-color:var(--article-background);
 	border-radius: 15px;
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
@@ -532,13 +542,13 @@ footer > nav > ul > li > a {
  * 						HEADER						*
  * **************************************************/
 @media (prefers-color-scheme: dark) {
-	body {
+	/*body {
 		filter: invert(100%);
 	}
 	
 	.image {
 		filter: invert(100%);
-	}
+	}*/
 }
 
 @media only screen and (max-width: 479px) {
