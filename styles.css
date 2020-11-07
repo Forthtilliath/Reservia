@@ -1,12 +1,10 @@
 :root {
 	--background-color: #313131;
 	--page-background: white;
+	--section-background: #F2F2F2;
 	--text-font: 'Raleway', sans-serif;
 	--text-color: black;
-	--section-background: #F2F2F2;
-}
-
-* {
+	--hover-color: #1E90FF;
 }
 
 html {
@@ -24,8 +22,36 @@ body {
 }
 
 /****************************************************
+ * 						DIVERS						*
+ * **************************************************/
+ 
+.stars {
+	font-size: 14px;
+	color: #b1b4b9;
+}
+
+.stars .star {
+	color: #0065FC;
+} 
+
+.image {
+	background-size: cover;
+	background-position: center center;
+}
+
+/* On masque les images car elles ne sont là que pour le référencement */
+.image img {
+	display: none;
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
+/****************************************************
  * 						HEADER						*
  * **************************************************/
+ 
 header {
 	display:flex;
 	justify-content:space-between;
@@ -60,7 +86,8 @@ header > nav > ul > li a:active {
     color: black;
 }
 
-li.active {
+header > nav > ul > li.active,
+header > nav > ul > li:hover {
 	color:#0065FC;
 	border-top:3px solid;
 }
@@ -74,11 +101,12 @@ header > nav > ul > li.active a {
 	font-weight:bold;
 }
 
-/********************
- * 
- ********************/
+/****************************************************
+ * 						SEARCH						*
+ * **************************************************/
+ 
 #wrapper {
-	padding:0 50px 50px 50px;
+	padding:0 5% 50px 5%;
 }
 
 #search > h1 {
@@ -152,6 +180,10 @@ header > nav > ul > li.active a {
     color:#0065FC;
 }
  
+/****************************************************
+ * 						FILTRES						*
+ * **************************************************/
+ 
 #filters {
 	font-weight:bold;
 	font-size:18px;
@@ -175,7 +207,7 @@ header > nav > ul > li.active a {
 }
 
 #filters > .filter:hover {
-	color:#1E90FF;
+	color: var(--hover-color);
 }
 
 .filter .fas {
@@ -192,7 +224,7 @@ header > nav > ul > li.active a {
 }
 
 .info .fa-info {
-	color:#1E90FF;
+	color: #1E90FF;
 	font-size: 14px;
     line-height: 16px;
 }
@@ -211,11 +243,18 @@ header > nav > ul > li.active a {
 	padding-bottom:2px;
 }
 
+/****************************************************
+ * 					HEBERGEMENTS					*
+ * **************************************************/
+ 
+#wrapper > div {
+	display: flex;
+    justify-content: space-between;
+}
+ 
 #accommodations {
 	width: 60%;
 	height: 640px;
-	float:left;
-	/*position:static;*/
 	background-color: var(--section-background);
 	border-radius: 20px;
     -moz-border-radius: 20px;
@@ -250,7 +289,7 @@ header > nav > ul > li.active a {
 	border: 5px solid white;
 	width: 30%;
 	margin-bottom:30px;
-	box-shadow: 5px 5px 12px #aaa;
+	box-shadow: 3px 3px 10px #aaa;
 	cursor:pointer;
 }
 
@@ -268,15 +307,6 @@ header > nav > ul > li.active a {
 	font-size: 14px;
 }
 
-.stars {
-	font-size: 14px;
-	color: #b1b4b9;
-}
-
-.stars .star {
-	color: #0065FC;
-}
-
 #show_more {
 	font-weight:bold;
 	font-size:18px;
@@ -292,23 +322,15 @@ header > nav > ul > li.active a {
     color: black;
 }
 
-#show_more a:hover,
-a:hover {
-    color: #1E90FF;
-}
- 
-.image {
-	background-size: cover;
-	background-position: center center;
+#show_more a:hover {
+    color: var(--hover-color);
 }
 
-.image img {
-	display: none;
-}
+/****************************************************
+ * 				LES PLUS POPULAIRES					*
+ * **************************************************/
 
 aside {
-	/*position: static;*/
-	float: right;
 	width: 28%;
 	height: 640px;
 	background-color: var(--section-background);
@@ -351,7 +373,7 @@ aside > div > i {
 	border: 5px solid white;
 	width: 90%;
 	margin:0 20px 30px;
-	box-shadow: 5px 5px 12px #aaa;
+	box-shadow: 3px 3px 10px #aaa;
 	cursor:pointer;
 	display:flex;
 	height: 30%;
@@ -393,17 +415,19 @@ aside > div > i {
 #accommodations_cards > article:hover,
 #aside_cards > article:hover,
 #activities article article:hover {
-	box-shadow: 5px 5px 12px #1E90FF;
+	box-shadow: 5px 5px 12px var(--hover-color);
 }
 
+
+/****************************************************
+ * 						ACTIVITES					*
+ * **************************************************/
+ 
 #activities {
-	clear: both;
-	width: 1350px;
 	padding-top: 30px;
 }
 	
 #activities_cards {
-	width: 1350px;
     height: 500px;
 	display:flex;
 	justify-content:space-between;
@@ -438,32 +462,8 @@ aside > div > i {
 }
 
 #activities_cards article:hover {
-	box-shadow: 3px 3px 10px #1E90FF;
+	box-shadow: 3px 3px 10px var(--hover-color);
 }
-
-/* Version 1
-#activities_cards > .two_articles > article {
-	height: 240px;
-}*/
-
-/* Version 2 : visiblement pas besoin de dimentionner les darticles
-#activities_cards > .one_article > article {
-	height: 480px;
-}
-
-#activities_cards > .two_articles > article:first-child {
-	height: 280px;
-	background-color:red;
-}
-
-#activities_cards > .two_articles > article:last-child {
-	height: 160px;
-	background-color:#31B000;
-}
-
-#activities_cards > .two_articles:last-child > article {
-	height: 220px;
-}*/
 
 #activities_cards article > .image {
 	width: 100%;
@@ -496,9 +496,11 @@ aside > div > i {
 	height: 170px;
 }
 
-/****************
- * Footer		*
- ****************/
+
+/****************************************************
+ * 						FOOTER						*
+ * **************************************************/
+ 
 footer {
 	background-color: var(--section-background);
 	display: flex;
@@ -513,8 +515,7 @@ footer > nav {
 footer > nav > ul {
 	list-style-type: none;
 	list-style-position: outside;
-	margin:0;
-	padding:0;
+	padding: 0;
 }
 
 footer > nav > ul > li {
@@ -527,6 +528,18 @@ footer > nav > ul > li > a {
 }
 
 
+/****************************************************
+ * 						HEADER						*
+ * **************************************************/
+@media (prefers-color-scheme: dark) {
+	body {
+		filter: invert(100%);
+	}
+	
+	.image {
+		filter: invert(100%);
+	}
+}
 
 @media only screen and (max-width: 479px) {
 
@@ -540,3 +553,12 @@ footer > nav > ul > li > a {
 @media tv (min-width:1919px) and (max-resolution:72dpi) {
 
 }
+
+/********************************
+ * Liste des dimentions à modifier
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
