@@ -65,13 +65,13 @@ header > a > img {
 	padding:50px 60px 0px;
 }
 
-header > nav > ul { 
+header > div > nav > ul { 
 	list-style-type: none; 
 	margin: 0 160px 0 0;
+	margin: 0;
 	padding: 0px;
-	position: relative;
 }
-header > nav > ul > li {
+header > div > nav > ul > li {
 	display: inline-block;
 	float: left;
 	padding:50px 32px 0px;
@@ -79,28 +79,34 @@ header > nav > ul > li {
 	cursor: pointer;
 }
 
-header > nav > ul > li a,
-header > nav > ul > li a:link,
-header > nav > ul > li a:visited,
-header > nav > ul > li a:active {
+header > div > nav > ul > li a,
+header > div > nav > ul > li a:link,
+header > div > nav > ul > li a:visited,
+header > div > nav > ul > li a:active {
     font-size: 16px;
     text-decoration: none;
     color: black;
+	cursor: pointer;
 }
 
-header > nav > ul > li.active,
-header > nav > ul > li:hover {
+header > div > nav > ul > li.active,
+header > div > nav > ul > li:hover {
 	color: var(--main-color);
 	border-top: 3px solid;
 	padding-top: 47px;
 }
 
-header > nav > ul > li.active a,
-header > nav > ul > li a:hover {
+header > div > nav > ul > li.active a,
+header > div > nav > ul > li a:hover {
 	color: var(--main-color);
 }
 
-header > nav > div {
+header > div {
+	display: flex;
+	
+}
+
+header > div > div {
     display: inline-block;
     float: left;
     padding: 50px 32px 0px;
@@ -562,6 +568,10 @@ footer > nav > ul > li > a {
  * 				POINTS DE RUPTURE					*
  * **************************************************/
 @media only screen and (max-width: 479px) {
+	header > a {
+		height: 90px;
+    }
+
 	header > a > img {
 		height: 50px;
 		padding: 20px;
@@ -573,11 +583,6 @@ footer > nav > ul > li > a {
 		padding: 37px 15px 0;
 		height: 50px;
 		margin: 0px;
-		right: 0;
-		position: fixed;
-		position: absolute;
-		vertical-align: middle;
-		/* font-size: 34px; */
 	}
 }
 
@@ -588,27 +593,43 @@ footer > nav > ul > li > a {
 	
 	header {
 		height: 190px;
+		display: block;
 	}
 	
-	header > nav > ul {
+	header > a {
+		height: 100px;
+	}
+	
+	header > div {
+		display: block;
+	}
+	
+	header > div > nav > ul {
 		left: 0;
 		top: 100px;
 		width: 100%;
 		position: fixed;
-		z-index: -1;
 	}
 	
-	header > nav > ul > li {
+	header > div > nav > ul > li {
 		padding: 20px 0;
 		width: 50%;
 		text-align: center;
 	}
 	
-	header > nav > ul > li.active, header > nav > ul > li:hover {
+	header > div > nav > ul > li.active, header > div > nav > ul > li:hover {
 		color: var(--main-color);
 		border-top: none;
 		border-bottom: 3px solid;
 		padding: 20px 0;
+		cursor: pointer;
+	}
+	
+	header > div > div {
+		height: 50px;
+		float: right;
+		padding: 0;
+		margin: -30px 30px 0 0;
 	}
 	
 	#search > form {
