@@ -575,6 +575,7 @@ footer > nav > ul > li > a {
 		margin: 0px;
 		right: 0;
 		position: fixed;
+		position: absolute;
 		vertical-align: middle;
 		/* font-size: 34px; */
 	}
