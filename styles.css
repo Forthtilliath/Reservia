@@ -127,6 +127,15 @@ header > nav > ul > li.active a {
 	margin: 30px 0px;
 }
 
+#search > .info > i {
+    color: #f2f2f2;
+    background-color: var(--main-color);
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
 
 .map-marker {
     display: inline-block;
@@ -148,42 +157,48 @@ header > nav > ul > li.active a {
 
 #form_search_ville {
     display: inline-block;
-    height: 47px;
+    height: 50px;
     width: 250px;
-    font-weight:bold;
-    font-size:20px;
-    border-top:1px solid #E5E5E5;
-    border-bottom:1px solid #E5E5E5;
-    border-left:none;
+    font-weight: bold;
+    font-size: 20px;
+    border-top: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+    border-left: 1px solid #E5E5E5;
     border-right:none;
     padding-left:10px;
     vertical-align: middle;
-
+	background-color: white;
+    margin: 0 -3px 0 -5px; /* Pour coller les éléments */
 }
 
-#form_search_bt {
-    display: inline-block;
+#form_bt_search {
+    width: 150px;
     height: 50px;
+    display: inline-block;
+    vertical-align: middle;
     background-color: var(--main-color);
     color: white;
     font-size: 22px;
-    border: none;
-    text-decoration: none;
-    cursor:pointer;
-    padding: 0 20px;
 	border-radius: 0 10px 10px 0;
     -moz-border-radius: 0 10px 10px 0;
     -ms-border-radius: 0 10px 10px 0;
     -o-border-radius: 0 10px 10px 0;
-    vertical-align: middle;
+    cursor:pointer;
 }
 
-#form_search_bt:hover,
-#form_search_bt:focus,
-#form_search_bt:active {
+#form_bt_search::before {
+	content: "Rechercher";
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+#form_bt_search:hover,
+#form_bt_search:focus,
+#form_bt_search:active {
     background-color: #FF9803;
     color:black;
-    box-shadow: 3px 3px 10px #aaa;
+    box-shadow: 1px 1px 7px #aaa;
     text-shadow: 1px 1px;
 }
  
@@ -194,7 +209,7 @@ header > nav > ul > li.active a {
 #filters {
 	font-weight:bold;
 	font-size:18px;
-	margin: 20px 10px;
+	margin: 0 10px;
 }
 
 #filters > .label {
@@ -209,7 +224,7 @@ header > nav > ul > li.active a {
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
-	margin: 0 10px;
+	margin: 10px;
 	cursor:pointer;
 }
 
@@ -228,26 +243,6 @@ header > nav > ul > li.active a {
     margin-right: 20px;
     width: 20px;
     text-align: center;
-}
-
-.info .fa-info {
-	color: #1E90FF;
-	font-size: 14px;
-    line-height: 16px;
-}
-
-.info .icon {
-	text-align: center;
-	float: left;
-	width: 18px;
-	height: 18px;
-	border: 1px solid #D0D0D0;
-	border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    -o-border-radius: 100%;
-	margin-right: 7px;
-	padding-bottom:2px;
 }
 
 /****************************************************
@@ -542,33 +537,52 @@ footer > nav > ul > li > a {
  * 						HEADER						*
  * **************************************************/
 @media (prefers-color-scheme: dark) {
-	/*body {
+	body {
 		filter: invert(100%);
 	}
 	
 	.image {
 		filter: invert(100%);
-	}*/
+	}
 }
 
+/****************************************************
+ * 				POINTS DE RUPTURE					*
+ * **************************************************/
 @media only screen and (max-width: 479px) {
 
 }
 
 @media only screen and (max-width: 959px) {
+	#form_bt_search::before {    
+		content: ""; /* Sans content, l'icone ne s'affiche pas */
+		padding-top: 50px; /* Pour décaler le content et voir l'icone, un truc du genre xD */
+		
+		display: flex; /* Sans, y'a pas d'icone, je sais pas pourquoi :p */
+		background: url(svgs/search.svg);
+		background-size: 30px;
+		background-repeat: no-repeat;
+		background-position: center;
+		filter: invert(100%);
+	}
 
+	#form_bt_search:hover,
+	#form_bt_search:focus,
+	#form_bt_search:active {
+		background-color: #FF9803;
+		color:black;
+		box-shadow: 1px 1px 7px #aaa;
+		text-shadow: 1px 1px;
+		filter: invert(100%);
+	}
+}
+
+/* Taille par defaut !!! */
+@media (min-width: 1280px) and (max-width: 1918px) {
+	
 }
 
 
-@media tv (min-width:1919px) and (max-resolution:72dpi) {
+/*@media tv (min-width:1919px) and (max-resolution:72dpi) {
 
-}
-
-/********************************
- * Liste des dimentions à modifier
- * 
- * 
- * 
- * 
- * 
- */
+}*/
