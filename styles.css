@@ -15,9 +15,8 @@ html {
 
 body {
 	width: 90%;
-	margin: 0 auto;
 	max-width: 1450px;
-	/*min-width: 1000px;*/
+	margin: 0 auto;
     font-family: var(--text-font);
     background-color: var(--page-background);
     color: var(--text-color);
@@ -68,7 +67,7 @@ header > a > img {
 
 header > nav > ul { 
 	list-style-type: none; 
-	margin: 0px;
+	margin: 0 160px 0 0;
 	padding: 0px;
 	position: relative;
 }
@@ -77,6 +76,7 @@ header > nav > ul > li {
 	float: left;
 	padding:50px 32px 0px;
 	margin: 0px;
+	cursor: pointer;
 }
 
 header > nav > ul > li a,
@@ -94,13 +94,23 @@ header > nav > ul > li:hover {
 	border-top: 3px solid;
 }
 
-header > nav > ul > li.active a {
+header > nav > ul > li.active a,
+header > nav > ul > li a:hover {
 	color: var(--main-color);
+}
+
+header > nav > div {
+    display: inline-block;
+    float: left;
+    padding: 50px 32px 0px;
+    margin: 0px;
 }
 
 #signin {
 	color: var(--main-color);
 	font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
 }
 
 /****************************************************
