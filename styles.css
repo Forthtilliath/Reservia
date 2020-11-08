@@ -225,6 +225,7 @@ header > nav > div {
 
 #filters > .label {
 	margin-right:10px;
+    display: inline-block;
 }
 
 #filters > .filter {
@@ -590,10 +591,19 @@ footer > nav > ul > li > a {
 		color: var(--main-color);
 		border-top: none;
 		border-bottom: 3px solid;
+		padding: 20px 0;
+	}
+	
+	#search > form {
+		margin: 20px 0;
+	}
+	
+	#form_search_ville {
+		width: calc(100% - 110px);
 	}
 	
 	#form_bt_search {
-		width: 80px;
+		width: 50px;
 		border-radius: 15px;
 		-moz-border-radius: 15px;
 		-ms-border-radius: 15px;
@@ -627,12 +637,25 @@ footer > nav > ul > li > a {
 	}
 	
 	#wrapper {
-		padding: 0 5% 10px 5%;
+		/*padding: 0 5% 10px 5%;*/
+		padding: 0 3% 10px 3%;
 	}
 	
 	#wrapper > div {
 		flex-direction: column-reverse;
 	}
+	
+	#filters > .label {
+		display: block;
+    }
+	
+	#filters > .filter {
+		padding-right: 10px;
+		margin: 10px 0;
+    }
+    .filter .fas {
+		margin-right: 10px;
+    }
 	
 	aside {
 		width: 96%;
