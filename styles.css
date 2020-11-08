@@ -281,7 +281,6 @@ header > nav > div {
 	flex-wrap: wrap;
 	align-content: flex-start;
 	justify-content:space-between;
-	flex-wrap:wrap;
 }
  
 #accommodations_cards > article > .image {
@@ -564,6 +563,45 @@ footer > nav > ul > li > a {
 }
 
 @media only screen and (max-width: 959px) {
+	body {
+		width: 100%;
+	}
+	
+	header {
+		height: 190px;
+	}
+	
+	header > nav > ul {
+		left: 0;
+		top: 100px;
+		width: 100%;
+		position: fixed;
+	}
+	
+	header > nav > ul > li {
+		padding: 20px 0;
+		width: 50%;
+		text-align: center;
+	}
+	
+	header > nav > ul > li.active, header > nav > ul > li:hover {
+		color: var(--main-color);
+		border-top: none;
+		border-bottom: 3px solid;
+	}
+	
+	#form_bt_search {
+		width: 80px;
+		border-radius: 15px;
+		-moz-border-radius: 15px;
+		-ms-border-radius: 15px;
+		-o-border-radius: 15px;
+	}
+	
+	#form_bt_search:focus {
+		border-right:none;
+	}
+
 	#form_bt_search::before {    
 		content: ""; /* Sans content, l'icone ne s'affiche pas */
 		padding-top: 50px; /* Pour décaler le content et voir l'icone, un truc du genre xD */
@@ -584,6 +622,76 @@ footer > nav > ul > li > a {
 		box-shadow: 1px 1px 7px #aaa;
 		text-shadow: 1px 1px;
 		filter: invert(100%);
+	}
+	
+	#wrapper {
+		padding: 0 5% 10px 5%;
+	}
+	
+	#wrapper > div {
+		flex-direction: column-reverse;
+	}
+	
+	aside {
+		width: 96%;
+		margin-bottom: 30px;
+	}
+	
+	aside > div:first-child {
+		padding: 0 20px;
+	}
+	
+	#aside_cards > article > .image {
+		width: 35%;
+	}
+	
+	#accommodations {
+		width: 96%;
+		height: auto;
+		background-color: var(--page-background);
+	}
+	
+	#accommodations_cards > article {
+		width: 96%;
+	}
+	
+	#activities {
+		width: 96%;
+		padding-top: 0;
+	}
+	
+	#activities_cards {
+		height: auto;
+		flex-direction: column;
+	}
+	
+	#activities_cards div {
+		width: 100%;
+		margin-right: 0;
+    }
+    
+    #activities_cards > div > article > .image {
+		height: 200px !important; /* important, pour éviter d'avoir à faire une règle pour chaque div */
+    }
+    
+    footer {
+		flex-direction: column;
+    }
+    
+    footer > nav {
+		width: 96%;
+	}
+    
+    footer > nav > h3 {
+		font-size: 22px;
+	}
+    
+    footer > nav > ul {
+		font-size: 20px;
+	}
+	
+	footer > nav > ul > li {
+		height: 35px;
 	}
 }
 
