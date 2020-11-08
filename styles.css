@@ -92,6 +92,7 @@ header > nav > ul > li.active,
 header > nav > ul > li:hover {
 	color: var(--main-color);
 	border-top: 3px solid;
+	padding-top: 47px;
 }
 
 header > nav > ul > li.active a,
@@ -240,6 +241,7 @@ header > nav > div {
 
 #filters > .filter:hover {
 	color: var(--hover-color);
+    border-color: var(--hover-color);
 }
 
 .filter .fas {
