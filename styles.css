@@ -178,7 +178,7 @@ header > div > nav > ul > li:hover {
 }
 
 header > div > nav > ul > li.active a,
-header > div > nav > ul > li a:hover {
+header > div > nav > ul > li:hover a {
 	color: var(--main-color);
 }
 

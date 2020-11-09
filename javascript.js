@@ -4,7 +4,6 @@
  ****************************************************/
 function goto(link) {
 	document.location.href = link;
-	console.log(link);
 	// Si le lien correspond à un element du menu
 	switch(link) {
 		case "#accommodations" : 
@@ -49,7 +48,6 @@ function addActive(link) {
 		list_li[i].classList.remove("active");
 	}
 	// On ajoute la classe active correspondant au lien
-	console.log("id = "+"to_"+link);
 	document.getElementById("to_"+link).classList.add("active");
 }
 
