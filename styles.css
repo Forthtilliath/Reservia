@@ -127,10 +127,6 @@ body {
 	display: none;
 }
 
-a:hover {
-    color: var(--hover-color);
-}
-
 /****************************************************
  * 						HEADER						*
  * **************************************************/
@@ -170,15 +166,13 @@ header > div > nav > ul > li a:visited {
 	cursor: pointer;
 }
 
-header > div > nav > ul > li.active,
-header > div > nav > ul > li:hover {
+header > div > nav > ul > li.active {
 	color: var(--main-color);
 	border-top: 3px solid;
 	padding-top: 47px;
 }
 
-header > div > nav > ul > li.active a,
-header > div > nav > ul > li:hover a {
+header > div > nav > ul > li.active a {
 	color: var(--main-color);
 }
 
@@ -283,6 +277,14 @@ header > div > div {
     cursor:pointer;
 }
 
+button#form_bt_search,
+button#form_bt_search:focus,
+button#form_bt_search:active {
+	border: none;
+	outline: none;
+    padding-bottom: 10px;
+}
+
 #form_bt_search::before {
 	content: "Rechercher";
     display: flex;
@@ -324,11 +326,6 @@ header > div > div {
     -o-border-radius: 25px;
 	margin: 10px;
 	cursor:pointer;
-}
-
-#filters > .filter:hover {
-	color: var(--hover-color);
-    border-color: var(--hover-color);
 }
 
 .filter .fas {
@@ -423,10 +420,6 @@ header > div > div {
     color: black;
 }
 
-#show_more a:hover {
-    color: var(--hover-color);
-}
-
 /****************************************************
  * 				LES PLUS POPULAIRES					*
  * **************************************************/
@@ -515,12 +508,6 @@ aside > div > i {
 	width:100%;
 }
 
-#accommodations_cards > article:hover,
-#aside_cards > article:hover,
-#activities article article:hover {
-	box-shadow: 5px 5px 12px var(--hover-color);
-}
-
 
 /****************************************************
  * 						ACTIVITES					*
@@ -562,10 +549,6 @@ aside > div > i {
 #activities_cards article > h3 {
 	margin: 0 auto;
 	padding: 14px 20px;
-}
-
-#activities_cards article:hover {
-	box-shadow: 3px 3px 10px var(--hover-color);
 }
 
 #activities_cards article > .image {
@@ -630,6 +613,10 @@ footer > nav > ul > li > a {
 	color:black;
 }
 
+.image:focus {
+	z-index:1000;
+}
+
 
 /****************************************************
  * 						HEADER						*
@@ -647,6 +634,43 @@ footer > nav > ul > li > a {
 /****************************************************
  * 				POINTS DE RUPTURE					*
  * **************************************************/
+
+/* Seulement les médias qui supportent complètement le :hover */
+@media (hover:hover) {
+	a:hover {
+		color: var(--hover-color);
+	}
+	
+	header > div > nav > ul > li:hover {
+		color: var(--main-color);
+		border-top: 3px solid;
+		padding-top: 47px;
+	}
+	
+	header > div > nav > ul > li:hover a {
+		color: var(--main-color);
+	}
+
+	#filters > .filter:hover {
+		color: var(--hover-color);
+		border-color: var(--hover-color);
+	}
+
+	#show_more a:hover {
+		color: var(--hover-color);
+	}
+
+	#accommodations_cards > article:hover,
+	#aside_cards > article:hover,
+	#activities article article:hover {
+		box-shadow: 5px 5px 12px var(--hover-color);
+	}
+
+	#activities_cards article:hover {
+		box-shadow: 3px 3px 10px var(--hover-color);
+	}
+}
+
 @media only screen and (max-width: 479px) {
 	header > a {
 		height: 90px;
@@ -702,7 +726,7 @@ footer > nav > ul > li > a {
 		color: var(--main-color);
 		border-top: none;
 		/*border-bottom: 3px solid;*/
-		box-shadow:inset 0px -3px var(--main-color); /* Meme effet que border-bottom, mais effet interne */
+		box-shadow: inset 0px -3px var(--main-color); /* Meme effet que border-bottom, mais effet interne */
 		padding: 20px 0;
 		cursor: pointer;
 	}

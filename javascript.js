@@ -16,9 +16,11 @@ function goto(link) {
 /****************************************************
  * Valide le formulaire afin d'activer l'action		*
  ****************************************************/
-function validForm() {
-	document.getElementById("form_search").submit();
-}
+//~ // Devenu inutile avec le changement du span en button
+//~ function validForm() {
+	//~ //document.getElementById("form_bt_submit").submit();
+	//~ document.getElementById("form_search").submit();
+//~ }
 
 /****************************************************
  * On récupère l'ancre pour rendre actif le menu	*
