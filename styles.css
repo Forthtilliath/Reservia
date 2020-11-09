@@ -592,6 +592,8 @@ footer > nav > ul > li > a {
 	header {
 		height: 190px;
 		display: block;
+		margin: 0 auto;
+		padding: 0;
 	}
 	
 	header > a {
@@ -620,13 +622,14 @@ footer > nav > ul > li > a {
 		border-bottom: 3px solid;
 		padding: 20px 0;
 		cursor: pointer;
+		box-sizing: border-box; /* Ajoute les borders à l'intérieur */
 	}
 	
 	header > div > div {
 		height: 50px;
 		float: right;
 		padding: 0;
-		margin: -115px 0 0 0;
+		margin: -115px 40px 0 0;
 	}
 	
 	#search > span {
