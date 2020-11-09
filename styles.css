@@ -701,10 +701,10 @@ footer > nav > ul > li > a {
 	header > div > nav > ul > li.active, header > div > nav > ul > li:hover {
 		color: var(--main-color);
 		border-top: none;
-		border-bottom: 3px solid;
+		/*border-bottom: 3px solid;*/
+		box-shadow:inset 0px -3px var(--main-color); /* Meme effet que border-bottom, mais effet interne */
 		padding: 20px 0;
 		cursor: pointer;
-		box-sizing: border-box; /* Ajoute les borders à l'intérieur */
 	}
 	
 	header > div > div {
