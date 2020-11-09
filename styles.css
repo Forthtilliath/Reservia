@@ -81,8 +81,7 @@ header > div > nav > ul > li {
 
 header > div > nav > ul > li a,
 header > div > nav > ul > li a:link,
-header > div > nav > ul > li a:visited,
-header > div > nav > ul > li a:active {
+header > div > nav > ul > li a:visited {
     font-size: 16px;
     text-decoration: none;
     color: black;
@@ -103,7 +102,6 @@ header > div > nav > ul > li a:hover {
 
 header > div {
 	display: flex;
-	
 }
 
 header > div > div {
@@ -608,7 +606,6 @@ footer > nav > ul > li > a {
 		left: 0;
 		top: 100px;
 		width: 100%;
-		position: fixed;
 	}
 	
 	header > div > nav > ul > li {
@@ -629,8 +626,24 @@ footer > nav > ul > li > a {
 		height: 50px;
 		float: right;
 		padding: 0;
-		margin: -30px 30px 0 0;
+		margin: -115px 0 0 0;
 	}
+	
+	#search > span {
+		font-size: 19px;
+    }
+    
+    #search > .info {
+		display: flex;
+    }
+    
+    #search > .info > i {
+		height: 16px;
+    }
+    
+    #search > .info > span {
+		padding-left:10px;
+    }
 	
 	#search > form {
 		margin: 20px 0;

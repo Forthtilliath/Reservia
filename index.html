@@ -18,8 +18,8 @@
 		<div>
 			<nav>
 				<ul>
-					<li onclick="goto('#accommodations')" class="active"><a href="#accommodations">H&eacute;bergements</a></li>
-					<li onclick="goto('#activities')"><a href="#activities">Activit&eacute;s</a></li>
+					<li onclick="goto('#accommodations')" id="to_accommodations"><a href="#accommodations">H&eacute;bergements</a></li>
+					<li onclick="goto('#activities')" id="to_activities"><a href="#activities">Activit&eacute;s</a></li>
 					<!--<li><a href="#" id="signin">S'inscrire</a></li>-->
 				</ul>
 			</nav>
@@ -30,7 +30,7 @@
 	</header>
 	<div id="wrapper">
 		<section id="search">
-			<h1>Trouver votre h&eacute;bergement pour des vacances de r&ecirc;ves</h1>
+			<h1>Trouver votre h&eacute;bergement pour des vacances de r&ecirc;ve</h1>
 			<span>En plein centre ou en pleine nature</span>
 			
 			<form action="#" name="form_search" id="form_search" method="get">
@@ -47,7 +47,8 @@
 				<span class="filter" onclick="goto('#filter-pets')"><i class="fas fa-dog"></i>Animaux autoris&eacute;s</span>
 			</div>
 			<p class="info">
-				<i class="fas fa-info-circle" aria-hidden="true"></i> Plus de 500 logements sont disponibles dans cette ville
+				<i class="fas fa-info-circle" aria-hidden="true"></i>
+				<span>Plus de 500 logements sont disponibles dans cette ville</span>
 			</p>
 		</section>
 		<div>
