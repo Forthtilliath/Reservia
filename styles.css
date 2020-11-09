@@ -7,6 +7,24 @@
 	--text-color: black;
 	--hover-color: #1E90FF;
 	--main-color: #0065FC;
+	
+	--img-auberge-la-cannebiere: url(images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
+	--img-hotel-du-port: url(images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg);
+	--img-hotel-les-mouettes: url(images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg);
+	--img-hotel-de-la-mer: url(images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
+	--img-hauberge-le-panier: url(images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg);
+	--img-hotel-chez-amina: url(images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg);
+	
+	--img-hotel-le-soleil-du-matin: url(images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg);
+	--img-au-coeur-de-l-eau: url(images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg);
+	--img-hotel-tout-bleu-et-blanc: url(images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg);
+	
+	--img-vieux-port: url(images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
+	--img-fort-de-pomegues: url(images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
+	--img-iles-du-frioul: url(images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
+	--img-parc-national-des-calanques: url(images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
+	--img-notre-dame-de-la-garde: url(images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg);
+	--img-parc-longchamp: url(images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
 }
 
 html {
@@ -23,7 +41,71 @@ body {
 }
 
 /****************************************************
- * 						DIVERS						*
+ *                LISTE DES IMAGES                  *
+ * **************************************************/
+ 
+.img-auberge-la-cannebiere {
+	background-image: var(--img-auberge-la-cannebiere);
+}
+
+.img-hotel-du-port {
+	background-image: var(--img-hotel-du-port);
+}
+
+.img-hotel-les-mouettes {
+	background-image: var(--img-hotel-les-mouettes);
+}
+
+.img-hotel-de-la-mer {
+	background-image: var(--img-hotel-de-la-mer);
+}
+
+.img-hauberge-le-panier {
+	background-image: var(--img-hauberge-le-panier);
+}
+
+.img-hotel-chez-amina {
+	background-image: var(--img-hotel-chez-amina);
+}
+
+.img-hotel-le-soleil-du-matin {
+	background-image: var(--img-hotel-le-soleil-du-matin);
+}
+
+.img-au-coeur-de-l-eau {
+	background-image: var(--img-au-coeur-de-l-eau);
+}
+
+.img-hotel-tout-bleu-et-blanc {
+	background-image: var(--img-hotel-tout-bleu-et-blanc);
+}
+
+.img-vieux-port {
+	background-image: var(--img-vieux-port);
+}
+
+.img-fort-de-pomegues {
+	background-image: var(--img-fort-de-pomegues);
+}
+
+.img-iles-du-frioul {
+	background-image: var(--img-iles-du-frioul);
+}
+
+.img-parc-national-des-calanques {
+	background-image: var(--img-parc-national-des-calanques);
+}
+
+.img-notre-dame-de-la-garde {
+	background-image: var(--img-notre-dame-de-la-garde);
+}
+
+.img-parc-longchamp {
+	background-image: var(--img-parc-longchamp);
+}
+
+/****************************************************
+ *                      DIVERS                      *
  * **************************************************/
  
 .stars {
