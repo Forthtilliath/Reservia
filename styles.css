@@ -119,7 +119,7 @@ body {
 
 .image {
 	background-size: cover;
-	background-position: center center;
+	background-position: center;
 }
 
 /* On masque les images car elles ne sont là que pour le référencement */
@@ -128,8 +128,8 @@ body {
 }
 
 /****************************************************
- * 						HEADER						*
- * **************************************************/
+ *                      HEADER                      *
+ ****************************************************/
  
 header {
 	display:flex;
@@ -182,55 +182,9 @@ header > nav {
 }
 
 header > nav > div {
-    display: inline-block;
-    float: left;
     padding: 50px 32px 0px;
     margin: 0px;
 }
-
-/*header > div > nav > ul { 
-	list-style-type: none; 
-	margin: 0 160px 0 0;
-	margin: 0;
-	padding: 0px;
-}
-header > div > nav > ul > li {
-	display: inline-block;
-	float: left;
-	padding:50px 32px 0px;
-	margin: 0px;
-	cursor: pointer;
-}
-
-header > div > nav > ul > li a,
-header > div > nav > ul > li a:link,
-header > div > nav > ul > li a:visited {
-    font-size: 16px;
-    text-decoration: none;
-    color: black;
-	cursor: pointer;
-}
-
-header > div > nav > ul > li.active {
-	color: var(--main-color);
-	border-top: 3px solid;
-	padding-top: 47px;
-}
-
-header > div > nav > ul > li.active a {
-	color: var(--main-color);
-}
-
-header > div {
-	display: flex;
-}
-
-header > div > div {
-    display: inline-block;
-    float: left;
-    padding: 50px 32px 0px;
-    margin: 0px;
-}*/
 
 #signin {
 	color: var(--main-color);
@@ -240,8 +194,8 @@ header > div > div {
 }
 
 /****************************************************
- * 						SEARCH						*
- * **************************************************/
+ *                      SEARCH                      *
+ *:**************************************************/
  
 #wrapper {
 	padding:0 5% 50px 5%;
@@ -347,8 +301,8 @@ button#form_bt_search:active {
 }
  
 /****************************************************
- * 						FILTRES						*
- * **************************************************/
+ *                      FILTRES                     *
+ ****************************************************/
  
 #filters {
 	font-weight:bold;
@@ -387,8 +341,8 @@ button#form_bt_search:active {
 }
 
 /****************************************************
- * 					HEBERGEMENTS					*
- * **************************************************/
+ *                  HEBERGEMENTS                    *
+ ****************************************************/
  
 #wrapper > div {
 	display: flex;
@@ -466,8 +420,8 @@ button#form_bt_search:active {
 }
 
 /****************************************************
- * 				LES PLUS POPULAIRES					*
- * **************************************************/
+ *              LES PLUS POPULAIRES                 *
+ ****************************************************/
 
 aside {
 	width: 28%;
@@ -555,8 +509,8 @@ aside > div > i {
 
 
 /****************************************************
- * 						ACTIVITES					*
- * **************************************************/
+ *                      ACTIVITES                   *
+ ****************************************************/
  
 #activities {
 	padding-top: 30px;
@@ -629,8 +583,8 @@ aside > div > i {
 
 
 /****************************************************
- * 						FOOTER						*
- * **************************************************/
+ *                      FOOTER                      *
+ ****************************************************/
  
 footer {
 	background-color: var(--section-background);
@@ -664,21 +618,21 @@ footer > nav > ul > li > a {
 
 
 /****************************************************
- * 						HEADER						*
- * **************************************************/
+ *                      HEADER                      *
+ ****************************************************/
 @media (prefers-color-scheme: dark) {
-	body {
+	/*body {
 		filter: invert(100%);
 	}
 	
 	.image {
 		filter: invert(100%);
-	}
+	}*/
 }
 
 /****************************************************
- * 				POINTS DE RUPTURE					*
- * **************************************************/
+ *              POINTS DE RUPTURE                   *
+ ****************************************************/
 
 /* Seulement les médias qui supportent complètement le :hover */
 @media (hover:hover) {
@@ -695,16 +649,6 @@ footer > nav > ul > li > a {
 	header > nav > ul > li:hover a {
 		color: var(--main-color);
 	}
-	
-	/*header > div > nav > ul > li:hover {
-		color: var(--main-color);
-		border-top: 3px solid;
-		padding-top: 47px;
-	}
-	
-	header > div > nav > ul > li:hover a {
-		color: var(--main-color);
-	}*/
 
 	#filters > .filter:hover {
 		color: var(--hover-color);
@@ -727,7 +671,11 @@ footer > nav > ul > li > a {
 }
 
 /* Taille par defaut !!! */
-@media (min-width: 1280px) and (max-width: 1918px) {
+@media only screen and (min-width: 1280px) and (max-width: 1918px) {
+	
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
 	
 }
 
@@ -743,12 +691,7 @@ footer > nav > ul > li > a {
 		padding: 0;
 	}
 	
-	header > a {
-		/*height: 100px;*/
-	}
-	
 	header > nav {
-		/*display: flex;*/
         flex-direction: column;
 	}
 	
@@ -770,58 +713,15 @@ footer > nav > ul > li > a {
 		padding: 20px 0;
 		width: 50%;
 		text-align: center;
+		border-bottom: 3px solid var(--section-background);
 	}
 	
 	header > nav > ul > li.active, header > nav > ul > li:hover {
-		/*color: var(--main-color);*/
 		border-top: none;
-		/*box-shadow: inset 0px -3px var(--main-color);*/
 		border-bottom: 3px solid var(--main-color);
-		box-shadow: none;
 		padding: 20px 0;
 		cursor: pointer;
 	}
-	
-	
-	
-	/* A corriger
-	 * header > nav > div {
-		height: 50px;
-		float: right;
-		padding: 0;
-		margin: -115px 40px 0 0;
-	}*/
-	
-	/*header > div {
-		display: block;
-	}
-	
-	header > div > nav > ul {
-		left: 0;
-		top: 100px;
-		width: 100%;
-	}
-	
-	header > div > nav > ul > li {
-		padding: 20px 0;
-		width: 50%;
-		text-align: center;
-	}
-	
-	header > div > nav > ul > li.active, header > div > nav > ul > li:hover {
-		color: var(--main-color);
-		border-top: none;
-		box-shadow: inset 0px -3px var(--main-color);
-		padding: 20px 0;
-		cursor: pointer;
-	}
-	
-	header > div > div {
-		height: 50px;
-		float: right;
-		padding: 0;
-		margin: -115px 40px 0 0;
-	}*/
 	
 	#search > span {
 		font-size: 19px;
@@ -882,7 +782,6 @@ footer > nav > ul > li > a {
 	}
 	
 	#wrapper {
-		/*padding: 0 5% 10px 5%;*/
 		padding: 0 3% 10px 3%;
 	}
 	
@@ -987,6 +886,14 @@ footer > nav > ul > li > a {
 		border-bottom: 3px solid var(--main-color);
 		box-shadow: none;
 	}
+	
+	header > nav > ul > li {
+		border-bottom: 3px solid var(--section-background);
+	}
+	
+	header > nav > div > #signin {
+		font-size: 18px;
+    }
 }
 
 
