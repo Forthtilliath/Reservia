@@ -15,7 +15,17 @@
 <body>
 	<header>
 		<a href="index.html"><img src="images/logo/Reservia@3x.png" srcset="images/logo/Reservia.svg" alt="Reservia" /></a>
-		<div>
+
+		<nav>
+			<ul>
+				<li onclick="goto('#accommodations')" id="to_accommodations"><a href="#accommodations">H&eacute;bergements</a></li>
+				<li onclick="goto('#activities')" id="to_activities"><a href="#activities">Activit&eacute;s</a></li>
+			</ul>
+			<div>
+				<a href="#" id="signin">S'inscrire</a>
+			</div>
+		</nav>
+		<!--<div>
 			<nav>
 				<ul>
 					<li onclick="goto('#accommodations')" id="to_accommodations"><a href="#accommodations">H&eacute;bergements</a></li>
@@ -25,7 +35,7 @@
 			<div>
 				<a href="#" id="signin">S'inscrire</a>
 			</div>
-		</div>
+		</div>-->
 	</header>
 	<div id="wrapper">
 		<section id="search">
