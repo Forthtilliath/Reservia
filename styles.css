@@ -143,7 +143,52 @@ header > a > img {
 	padding:50px 60px 0px;
 }
 
-header > div > nav > ul { 
+header > nav > ul { 
+	list-style-type: none; 
+	margin: 0 160px 0 0;
+	margin: 0;
+	padding: 0px;
+}
+header > nav > ul > li {
+	display: inline-block;
+	float: left;
+	padding:50px 32px 0px;
+	margin: 0px;
+	cursor: pointer;
+}
+
+header > nav > ul > li a,
+header > nav > ul > li a:link,
+header > nav > ul > li a:visited {
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+	cursor: pointer;
+}
+
+header > nav > ul > li.active {
+	color: var(--main-color);
+	border-top: 3px solid;
+	border-bottom: none;
+	padding-top: 47px;
+}
+
+header > nav > ul > li.active a {
+	color: var(--main-color);
+}
+
+header > nav {
+	display: flex;
+}
+
+header > nav > div {
+    display: inline-block;
+    float: left;
+    padding: 50px 32px 0px;
+    margin: 0px;
+}
+
+/*header > div > nav > ul { 
 	list-style-type: none; 
 	margin: 0 160px 0 0;
 	margin: 0;
@@ -185,7 +230,7 @@ header > div > div {
     float: left;
     padding: 50px 32px 0px;
     margin: 0px;
-}
+}*/
 
 #signin {
 	color: var(--main-color);
@@ -641,7 +686,17 @@ footer > nav > ul > li > a {
 		color: var(--hover-color);
 	}
 	
-	header > div > nav > ul > li:hover {
+	header > nav > ul > li:hover {
+		color: var(--main-color);
+		border-top: 3px solid;
+		padding-top: 47px;
+	}
+	
+	header > nav > ul > li:hover a {
+		color: var(--main-color);
+	}
+	
+	/*header > div > nav > ul > li:hover {
 		color: var(--main-color);
 		border-top: 3px solid;
 		padding-top: 47px;
@@ -649,7 +704,7 @@ footer > nav > ul > li > a {
 	
 	header > div > nav > ul > li:hover a {
 		color: var(--main-color);
-	}
+	}*/
 
 	#filters > .filter:hover {
 		color: var(--hover-color);
@@ -671,23 +726,9 @@ footer > nav > ul > li > a {
 	}
 }
 
-@media only screen and (max-width: 479px) {
-	header > a {
-		height: 90px;
-    }
-
-	header > a > img {
-		height: 50px;
-		padding: 20px;
-	}
+/* Taille par defaut !!! */
+@media (min-width: 1280px) and (max-width: 1918px) {
 	
-	header > nav > div {
-		display: inline-block;
-		float: right;
-		padding: 37px 15px 0;
-		height: 50px;
-		margin: 0px;
-	}
 }
 
 @media only screen and (max-width: 959px) {
@@ -696,17 +737,62 @@ footer > nav > ul > li > a {
 	}
 	
 	header {
-		height: 190px;
+		height: auto;
 		display: block;
 		margin: 0 auto;
 		padding: 0;
 	}
 	
 	header > a {
-		height: 100px;
+		/*height: 100px;*/
 	}
 	
-	header > div {
+	header > nav {
+		/*display: flex;*/
+        flex-direction: column;
+	}
+	
+	header > nav > div {
+		order: -1;
+		width: 100%;
+		text-align: right;
+		padding: 0;
+		margin: -35px 0 20px -40px;
+	}
+	
+	header > nav > ul {
+		left: 0;
+		top: 100px;
+		width: 100%;
+	}
+	
+	header  > nav > ul > li {
+		padding: 20px 0;
+		width: 50%;
+		text-align: center;
+	}
+	
+	header > nav > ul > li.active, header > nav > ul > li:hover {
+		/*color: var(--main-color);*/
+		border-top: none;
+		/*box-shadow: inset 0px -3px var(--main-color);*/
+		border-bottom: 3px solid var(--main-color);
+		box-shadow: none;
+		padding: 20px 0;
+		cursor: pointer;
+	}
+	
+	
+	
+	/* A corriger
+	 * header > nav > div {
+		height: 50px;
+		float: right;
+		padding: 0;
+		margin: -115px 40px 0 0;
+	}*/
+	
+	/*header > div {
 		display: block;
 	}
 	
@@ -725,8 +811,7 @@ footer > nav > ul > li > a {
 	header > div > nav > ul > li.active, header > div > nav > ul > li:hover {
 		color: var(--main-color);
 		border-top: none;
-		/*border-bottom: 3px solid;*/
-		box-shadow: inset 0px -3px var(--main-color); /* Meme effet que border-bottom, mais effet interne */
+		box-shadow: inset 0px -3px var(--main-color);
 		padding: 20px 0;
 		cursor: pointer;
 	}
@@ -736,7 +821,7 @@ footer > nav > ul > li > a {
 		float: right;
 		padding: 0;
 		margin: -115px 40px 0 0;
-	}
+	}*/
 	
 	#search > span {
 		font-size: 19px;
@@ -880,9 +965,28 @@ footer > nav > ul > li > a {
 	}
 }
 
-/* Taille par defaut !!! */
-@media (min-width: 1280px) and (max-width: 1918px) {
+@media only screen and (max-width: 479px) {
+	header > a {
+		height: 90px;
+    }
+
+	header > a > img {
+		height: 50px;
+		padding: 20px 20px 0 20px;
+	}
 	
+	/*header > nav > div {
+		display: inline-block;
+		float: right;
+		padding: 37px 15px 0;
+		height: 50px;
+		margin: 0px;
+	}*/
+	
+	header > nav > ul > li.active, header > nav > ul > li:hover {
+		border-bottom: 3px solid var(--main-color);
+		box-shadow: none;
+	}
 }
 
 

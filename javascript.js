@@ -44,7 +44,7 @@ function addActive(link) {
 	// Si le lien fait parti du menu
 	if( ele_menu.includes(link) ) {
 		// On sélectionne tous les éléments du menu nav
-		var list_li = document.querySelectorAll("header > div > nav > ul > li");
+		var list_li = document.querySelectorAll("header > nav > ul > li");
 		// Pour chaque élément du menu
 		for (var i = 0; i < list_li.length; i++) {
 			// On retire la classe active
