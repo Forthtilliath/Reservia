@@ -30,7 +30,7 @@
 }
 
 html {
-	width: 100%
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -579,6 +579,9 @@ aside > div > i {
 #activities_cards article  h3 {
 	margin: 0 auto;
 	padding: 14px 20px;
+    white-space: nowrap;
+	text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 #activities_cards article  .image {
@@ -601,7 +604,6 @@ aside > div > i {
  * Pour les hauteurs, chaque article aura par defaut :		*
  * 	- 50px pour la hauteur du h3							*
  *  - 20px pour le margin du bot							*
- * Dans le cas de plusieurs articles, il faut ajouter :		*
  *  - 20px pour aggrandir l'espacement entre 2 éléments		*
  ************************************************************/
  
@@ -627,6 +629,12 @@ aside > div > i {
 #activities_cards > article.activity_img_1_2 .image {
     /*height: 170px;*/
     height: calc(520px/2 - 90px);
+}
+
+/* 1_4 signifie 25% de la hauteur */
+#activities_cards > article.activity_img_1_4 .image {
+    /*height: 170px;*/
+    height: calc(520px/4 - 90px);
 }
 
 
@@ -704,7 +712,8 @@ footer > #footer > nav > ul > li > a {
 		border-color: var(--hover-color);
 	}
 
-	#show_more a:hover {
+	#show_more a:hover,
+	#show_more:hover a {
 		color: var(--hover-color);
 	}
 
@@ -728,7 +737,7 @@ footer > #footer > nav > ul > li > a {
 	
 }
 
-@media only screen and (max-width: 959px) {
+@media only screen (min-width: 480px) and (max-width: 959px) {
 	body {
 		width: 100%;
 	}
@@ -745,7 +754,7 @@ footer > #footer > nav > ul > li > a {
         flex-direction: column;
         padding: 0;
 	}
-	
+	 
 	header > nav > div {
 		order: -1;
 		width: 100%;
@@ -877,13 +886,7 @@ footer > #footer > nav > ul > li > a {
 	}
 	
 	#activities {
-		width: 96%;
 		padding-top: 0;
-	}
-	
-	#activities_cards {
-		height: auto;
-		flex-direction: column;
 	}
 	
 	#activities_cards div {
@@ -891,32 +894,94 @@ footer > #footer > nav > ul > li > a {
 		margin-right: 0;
     }
     
-    #activities_cards > div > article .image {
-		height: 200px !important; /* important, pour éviter d'avoir à faire une règle pour chaque div */
+    #activities_cards > article {
+		width: 48%;
     }
     
-    footer {
+    #activities_cards > article .image {
+		height: 200px !important; /* important, pour éviter d'avoir à faire une règle pour chaque div */
+    }
+	
+	#activities_cards {
+		height: calc((200px + 90px) * 3);
+	}
+	
+	#activities_cards h3 {
+		text-align: center;
+	}
+    
+    footer > #footer {
 		flex-direction: column;
     }
     
-    footer > nav {
+    footer > #footer > nav {
 		width: 96%;
 	}
     
-    footer > nav > h3 {
+    footer > #footer > nav > h3 {
 		font-size: 22px;
 	}
     
-    footer > nav > ul {
+    footer > #footer > nav > ul {
 		font-size: 20px;
 	}
 	
-	footer > nav > ul > li {
+	footer > #footer > nav > ul > li {
 		height: 35px;
 	}
 }
 
 @media only screen and (max-width: 479px) {
+	body {
+		width: 100%;
+	}
+	
+	header {
+		width: 100%;
+		height: auto;
+		display: block;
+		margin: 0 auto;
+		padding: 0;
+	}
+	
+	header > nav {
+        flex-direction: column;
+        padding: 0;
+	}
+	
+	header > nav > div {
+		order: -1;
+		width: 100%;
+		text-align: right;
+		padding: 0;
+		/*margin: -78px 0 20px -40px;*/
+		margin: -35px 0 20px -40px;
+	}
+	
+	header > nav > div > #signin {
+		font-size: 18px;
+    }
+	
+	header > nav > ul {
+		left: 0;
+		top: 100px;
+		width: 100%;
+	}
+	
+	header  > nav > ul > li {
+		padding: 20px 0;
+		width: 50%;
+		text-align: center;
+		border-bottom: 3px solid var(--section-background);
+	}
+	
+	header > nav > ul > li.active, header > nav > ul > li:hover {
+		border-top: none;
+		border-bottom: 3px solid var(--main-color);
+		padding: 20px 0;
+		cursor: pointer;
+	}
+	
 	header > a {
 		height: 90px;
     }
@@ -926,13 +991,177 @@ footer > #footer > nav > ul > li > a {
 		padding: 20px 20px 0 20px;
 	}
 	
-	/*header > nav > div {
-		display: inline-block;
-		float: right;
-		padding: 37px 15px 0;
+	#search > span {
+		font-size: 19px;
+    }
+    
+    #search > .info {
+		display: flex;
+    }
+    
+    #search > .info > i {
+		height: 16px;
+    }
+    
+    #search > .info > span {
+		padding-left:10px;
+    }
+	
+	#search > form {
+		margin: 20px 0;
+	}
+	
+	#form_search_ville {
+		width: calc(100% - 110px);
+	}
+	
+	#form_bt_search {
+		width: 50px;
+		border-radius: 15px;
+		-moz-border-radius: 15px;
+		-ms-border-radius: 15px;
+		-o-border-radius: 15px;
+	}
+	
+	#form_bt_search:focus {
+		border-right:none;
+	}
+
+	#form_bt_search::before {    
+		content: ""; /* Sans content, l'icone ne s'affiche pas */
+		padding-top: 50px; /* Pour décaler le content et voir l'icone, un truc du genre xD */
+		
+		display: flex; /* Sans, y'a pas d'icone, je sais pas pourquoi :p */
+		background: url(svgs/search.svg);
+		background-size: 30px;
+		background-repeat: no-repeat;
+		background-position: center;
+		filter: invert(100%);
+	}
+
+	#form_bt_search:hover,
+	#form_bt_search:focus,
+	#form_bt_search:active {
+		background-color: #FF9803;
+		color:black;
+		box-shadow: 1px 1px 7px #aaa;
+		text-shadow: 1px 1px;
+		filter: invert(100%);
+	}
+	
+	#wrapper {
+		/*padding: 0 3% 10px 3%;*/
+		width:100%;
+		padding-bottom: 15px;
+	}
+	
+	#wrapper > div {
+		flex-direction: column-reverse;
+	}
+	
+	#filters > .label {
+		display: block;
+    }
+	
+	#filters > .filter {
+		padding-right: 10px;
+		margin: 10px 0;
+    }
+    .filter .fas {
+		margin-right: 10px;
+    }
+	
+	aside {
+		width: 96%;
+		margin-bottom: 30px;
+	}
+	
+	aside > div:first-child {
+		padding: 0 20px;
+	}
+	
+	#aside_cards > article .image {
+		width: 35%;
+	}
+	
+	#accommodations {
+		width: 96%;
+		height: auto;
+		background-color: var(--page-background);
+	}
+	
+	#accommodations_cards > article {
+		width: 96%;
+	}
+	
+	#activities {
+		padding-top: 0;
+	}
+	
+	#activities_cards div {
+		width: 100%;
+		margin-right: 0;
+    }
+    
+    #activities_cards > article {
+		width: 48%;
+    }
+    
+    #activities_cards > article .image {
+		height: 200px !important; /* important, pour éviter d'avoir à faire une règle pour chaque div */
+    }
+	
+	#activities_cards {
+		height: calc((200px + 90px) * 3);
+	}
+	
+	#activities_cards h3 {
+		text-align: center;
+	}
+    
+    #activities_cards > article {
+		width: 100%;
+    }
+	
+	#activities_cards {
+		height: calc((200px + 90px) * 6);
+	}
+	
+	#activities_cards > article .image {
+		height: 300px;
+	}
+    
+    footer > #footer {
+		flex-direction: column;
+		padding-left: 40px;
+    }
+    
+    footer > #footer > nav {
+		width: 96%;
+	}
+    
+    footer > #footer > nav > h3 {
+		font-size: 22px;
+	}
+    
+    footer > #footer > nav > ul {
+		font-size: 20px;
+	}
+	
+	footer > #footer > nav > ul > li {
+		height: 35px;
+	}
+}
+
+/*@media only screen and (max-width: 479px) {
+	header > a {
+		height: 90px;
+    }
+
+	header > a > img {
 		height: 50px;
-		margin: 0px;
-	}*/
+		padding: 20px 20px 0 20px;
+	}
 	
 	header > nav > ul > li.active, header > nav > ul > li:hover {
 		border-bottom: 3px solid var(--main-color);
@@ -951,7 +1180,27 @@ footer > #footer > nav > ul > li > a {
 	header > nav > div > #signin {
 		font-size: 18px;
     }
-}
+    
+    #wrapper {
+		padding-bottom: 15px;
+	}
+    
+    #activities_cards > article {
+		width: 100%;
+    }
+	
+	#activities_cards {
+		height: calc((200px + 90px) * 6);
+	}
+	
+	#activities_cards > article .image {
+		height: 300px;
+	}
+	
+	footer > #footer {
+		padding-left: 40px;
+	}
+}*/
 
 
 /*@media tv (min-width:1919px) and (max-resolution:72dpi) {
