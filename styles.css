@@ -388,7 +388,7 @@ button#form_bt_search:active {
 	justify-content:space-between;
 }
  
-#accommodations_cards > article > .image {
+#accommodations_cards > article .image {
 	width: 100%;
 	height: 150px;
 	border-radius: 15px 15px 0 0;
@@ -410,18 +410,26 @@ button#form_bt_search:active {
 	cursor:pointer;
 }
 
-#accommodations_cards > article > h4 {
+#accommodations_cards > article h4 {
 	margin: 5px 0;
 }
 
-#accommodations_cards > article > h4,
-#accommodations_cards > article > .prix,
-#accommodations_cards > article > .stars {
+#accommodations_cards > article h4,
+#accommodations_cards > article .prix,
+#accommodations_cards > article .stars {
 	padding: 5px 10px 0;
 }
 
-#accommodations_cards > article > .prix {
+#accommodations_cards > article .prix {
 	font-size: 14px;
+}
+
+#accommodations_cards > article a,
+#accommodations_cards > article a:link,
+#accommodations_cards > article a:visited,
+#accommodations_cards > article a:active {
+    text-decoration: none;
+    color: black;
 }
 
 #show_more {
@@ -490,11 +498,14 @@ aside > div > i {
 	margin-bottom: 30px;
 	box-shadow: 3px 3px 10px #aaa;
 	cursor:pointer;
-	display:flex;
 	height: 30%;
 }
+
+#aside_cards > article a {
+	display:flex;
+}
  
-#aside_cards > article > .image {
+#aside_cards > article .image {
 	height: 150px;
 	width: 30%;
 	border-radius: 15px 0 0 15px;
@@ -504,7 +515,7 @@ aside > div > i {
 	margin-right: 20px;
 }
 
-#aside_cards > article > .content {
+#aside_cards > article .content {
 	height: 150px;
 	width: 60%;
 	display: flex;
@@ -512,19 +523,27 @@ aside > div > i {
 	justify-content:space-between;
 }
 
-#aside_cards > article > .content h4 {
+#aside_cards > article .content h4 {
 	width:100%;
 }
 
-#aside_cards > article > .content .prix {
+#aside_cards > article .content .prix {
 	font-size: 14px;
 	margin-top: 10px;
 	width:100%;
 }
 
-#aside_cards > article > .content > .stars {
+#aside_cards > article .content > .stars {
 	height:30px;
 	width:100%;
+}
+
+#aside_cards > article a,
+#aside_cards > article a:link,
+#aside_cards > article a:visited,
+#aside_cards > article a:active {
+    text-decoration: none;
+    color: black;
 }
 
 
@@ -566,17 +585,25 @@ aside > div > i {
 	cursor:pointer;
 }
 
-#activities_cards article > h3 {
+#activities_cards article  h3 {
 	margin: 0 auto;
 	padding: 14px 20px;
 }
 
-#activities_cards article > .image {
+#activities_cards article  .image {
 	width: 100%;
 	border-radius: 15px 15px 0 0;
     -moz-border-radius: 15px 15px 0 0;
     -ms-border-radius:  15px 15px 0 0;
     -o-border-radius: 15px 15px 0 0;
+}
+
+#activities_cards article a,
+#activities_cards article a:link,
+#activities_cards article a:visited,
+#activities_cards article a:active {
+    text-decoration: none;
+    color: black;
 }
 
 /************************************************************
@@ -586,19 +613,19 @@ aside > div > i {
  * Dans le cas de plusieurs articles, il faut ajouter :		*
  *  - 20px pour aggrandir l'espacement entre 2 éléments		*
  ************************************************************/
-#activities_cards > .one_article > article > .image {
+#activities_cards > .one_article > article .image {
 	height: 430px;
 }
 
-#activities_cards > .two_articles.first_art_68 > article:first-child > .image {
+#activities_cards > .two_articles.first_art_68 > article:first-child .image {
 	height: 230px;
 }
 
-#activities_cards > .two_articles.first_art_68 > article:last-child > .image {
+#activities_cards > .two_articles.first_art_68 > article:last-child .image {
 	height: 110px;
 }
 
-#activities_cards > .two_articles:not(.first_art_68) > article > .image {
+#activities_cards > .two_articles:not(.first_art_68) > article .image {
 	height: 170px;
 }
 
@@ -643,13 +670,13 @@ footer > #footer > nav > ul > li > a {
  *                      HEADER                      *
  ****************************************************/
 @media (prefers-color-scheme: dark) {
-	/*body {
+	body {
 		filter: invert(100%);
 	}
 	
 	.image {
 		filter: invert(100%);
-	}*/
+	}
 }
 
 /****************************************************
@@ -832,7 +859,7 @@ footer > #footer > nav > ul > li > a {
 		padding: 0 20px;
 	}
 	
-	#aside_cards > article > .image {
+	#aside_cards > article .image {
 		width: 35%;
 	}
 	
@@ -861,7 +888,7 @@ footer > #footer > nav > ul > li > a {
 		margin-right: 0;
     }
     
-    #activities_cards > div > article > .image {
+    #activities_cards > div > article .image {
 		height: 200px !important; /* important, pour éviter d'avoir à faire une règle pour chaque div */
     }
     
