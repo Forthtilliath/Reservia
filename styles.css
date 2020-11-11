@@ -555,26 +555,17 @@ aside > div > i {
 	padding-top: 30px;
 	margin: 0px 3%;
 }
-	
+
 #activities_cards {
-    height: 500px;
-	display:flex;
-	justify-content:space-between;
-}
-
-#activities_cards div {
-	width:25%;
-	height:100%;
-	padding:0;
-	margin-right:30px;
-}
-
-#activities_cards div:last-child {
-    margin-right: 0;
+    height: 520px;
+    display: flex;
+    align-content: space-between;
+    flex-flow: row wrap;
+    flex-direction: column;
 }
 
 #activities_cards article {
-	width: 100%;
+	width: 23%;
 	background-color:var(--article-background);
 	border-radius: 15px;
     -moz-border-radius: 15px;
@@ -613,20 +604,26 @@ aside > div > i {
  * Dans le cas de plusieurs articles, il faut ajouter :		*
  *  - 20px pour aggrandir l'espacement entre 2 éléments		*
  ************************************************************/
-#activities_cards > .one_article > article .image {
-	height: 430px;
+ 
+#activities_cards > article.activity_img_430px .image {
+    /*height: 430px;*/
+    height: calc(520px - 90px);
 }
-
-#activities_cards > .two_articles.first_art_68 > article:first-child .image {
-	height: 230px;
+#activities_cards > article.activity_img_230px .image {
+    /*height: 230px;*/
+    height: calc(520px/3*2 - 90px);
 }
-
-#activities_cards > .two_articles.first_art_68 > article:last-child .image {
-	height: 110px;
+#activities_cards > article.activity_img_110px .image {
+    /*height: 110px;*/
+    height: calc(520px/3*1 - 90px);
 }
-
-#activities_cards > .two_articles:not(.first_art_68) > article .image {
-	height: 170px;
+#activities_cards > article.activity_img_170px .image {
+    /*height: 170px;*/
+    height: calc(520px/2 - 90px);
+}
+#activities_cards > article.activity_img_170px .image {
+    /*height: 170px;*/
+    height: calc(520px/2 - 90px);
 }
 
 
