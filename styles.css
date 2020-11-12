@@ -512,7 +512,7 @@ aside > div > i {
     -moz-border-radius: 15px 0 0 15px;
     -ms-border-radius: 15px 0 0 15px;
     -o-border-radius: 15px 0 0 15px;
-	margin-right: 20px;
+	/*margin-right: 20px;*/
 }
 
 #aside_cards > article .content {
@@ -576,7 +576,7 @@ aside > div > i {
 	cursor:pointer;
 }
 
-#activities_cards article  h3 {
+#activities_cards article h3 {
 	margin: 0 auto;
 	padding: 14px 20px;
     white-space: nowrap;
@@ -737,7 +737,15 @@ footer > #footer > nav > ul > li > a {
 	
 }
 
-@media only screen (min-width: 480px) and (max-width: 959px) {
+@media only screen and (min-width: 800px) and (max-width: 959px) {
+	
+}
+
+@media only screen and (min-width: 480px) and (max-width: 799px) {
+	:root {
+		--activities-height-img: 200px;
+	}
+	
 	body {
 		width: 100%;
 	}
@@ -872,7 +880,25 @@ footer > #footer > nav > ul > li > a {
 	}
 	
 	#aside_cards > article .image {
-		width: 35%;
+		width: 70%;
+	}
+	
+	#aside_cards > article:nth-child(even) .image {
+		/*margin-right: 0;
+		margin-left: 20px;*/
+		border-radius: 0 15px 15px 0;
+		-moz-border-radius: 0 15px 15px 0;
+		-ms-border-radius: 0 15px 15px 0;
+		-o-border-radius: 0 15px 15px 0;
+	}
+	
+	#aside_cards > article:nth-child(even) a {
+		flex-flow: row-reverse;
+	}
+	
+	#aside_cards > article .content {
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 	
 	#accommodations {
@@ -882,11 +908,15 @@ footer > #footer > nav > ul > li > a {
 	}
 	
 	#accommodations_cards > article {
-		width: 96%;
+		width: 46%;
 	}
 	
 	#activities {
 		padding-top: 0;
+	}
+	
+	#activities_cards {
+		height: calc((var(--activities-height-img) + 90px) * 3);
 	}
 	
 	#activities_cards div {
@@ -899,23 +929,22 @@ footer > #footer > nav > ul > li > a {
     }
     
     #activities_cards > article .image {
-		height: 200px !important; /* important, pour éviter d'avoir à faire une règle pour chaque div */
+		height: var(--activities-height-img) !important; /* important, pour éviter d'avoir à faire une règle pour chaque div */
     }
-	
-	#activities_cards {
-		height: calc((200px + 90px) * 3);
-	}
 	
 	#activities_cards h3 {
 		text-align: center;
 	}
     
     footer > #footer {
+		margin: 0 20px;
 		flex-direction: column;
+		flex-flow: wrap;
     }
     
     footer > #footer > nav {
-		width: 96%;
+		width: 50%;
+		text-align: center;
 	}
     
     footer > #footer > nav > h3 {
@@ -932,6 +961,10 @@ footer > #footer > nav > ul > li > a {
 }
 
 @media only screen and (max-width: 479px) {
+	:root {
+		--activities-height-img: 170px;
+	}
+	
 	body {
 		width: 100%;
 	}
@@ -1098,37 +1131,28 @@ footer > #footer > nav > ul > li > a {
 		padding-top: 0;
 	}
 	
+	#activities_cards {
+		/*height: calc((170px + 100px) * 6);*/
+		height: calc((var(--activities-height-img) + 100px) * 6);
+	}
+	
 	#activities_cards div {
 		width: 100%;
 		margin-right: 0;
     }
     
     #activities_cards > article {
-		width: 48%;
+		width: 100%;
     }
     
     #activities_cards > article .image {
-		height: 200px !important; /* important, pour éviter d'avoir à faire une règle pour chaque div */
+		/*height: 170px !important;*/
+		height: var(--activities-height-img) !important; /* important, pour éviter d'avoir à faire une règle pour chaque div */
     }
 	
-	#activities_cards {
-		height: calc((200px + 90px) * 3);
-	}
-	
-	#activities_cards h3 {
-		text-align: center;
-	}
-    
-    #activities_cards > article {
-		width: 100%;
-    }
-	
-	#activities_cards {
-		height: calc((200px + 90px) * 6);
-	}
-	
-	#activities_cards > article .image {
-		height: 300px;
+	#activities_cards article h3 {
+		text-align: left;
+		padding: 19px 20px;
 	}
     
     footer > #footer {
